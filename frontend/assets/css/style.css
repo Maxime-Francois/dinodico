@@ -7,6 +7,7 @@ body {
     font-family: "Quicksand", sans-serif;
     font-size: 62.5%;
     font-size: 10px;
+    background-color: #252E34;
 }
 /*-- Inspiration taken from abdo steif -->
 /* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
@@ -76,7 +77,7 @@ body {
 .home {
     width: 100%;
     height: 100vh;
-    background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
+    background-image : url(../../img/banner-dino.jpg);
     background-position: center top;
   background-size:cover;
 }
@@ -402,9 +403,7 @@ body {
   
    
   }
-  main{
-      margin-top: 2rem;
-  }
+  
   main {    
     max-width: 1200px;
     margin: 0 auto;
@@ -414,18 +413,50 @@ body {
   i.fas.fa-bars{
     margin-top: 5px;   
   }
- .dropdown {
-  float: left;
-  overflow: hidden;
-}
 
-.dropdown .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
+  button.btn.btn-primary{
+    margin-top: 10px;
+    width: 300px;
+    height: 50px;
+    margin-left: 40px;
+    font-size:3rem;
+  }
+  .btn-primary {
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color:#402974;
+    border-color: #402974; /*set the color you want here*/
+}
+.zoom1
+{
+    display:inline-block;
+    
+    position: relative;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);   
+
+}
+.zoom:hover
+{
+   
+   
+   z-index: 2;
+   -webkit-transition: all 200ms ease-in;
+   -webkit-transform: scale(1.1);
+   -ms-transition: all 200ms ease-in;
+   -ms-transform: scale(1.1);   
+   -moz-transition: all 200ms ease-in;
+   -moz-transform: scale(1.1);
+   transition: all 200ms ease-in;
+   transform: scale(1.1);
 }
