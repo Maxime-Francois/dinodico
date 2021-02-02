@@ -2,9 +2,11 @@
   <?php foreach ($dinosaures as $dinosaure ) { ?>
   
         <article class="zoom">
-          <img class="article-img" src="img/t-rex.jpeg" alt=" " />
+          <img  class ="article-img"src="<?=$baseUri?>/assets/img/<?=$dinosaure->getNumero()?>.jpg" alt="Image du dinosaure">
           
-          <button type="button" class="btn btn-primary">Tyrannosaure</button>
+          <button type="button" class="btn btn-primary" ><?= $dinosaure->getNom()?> 
+         
+          </button>
          </article>
          
 <?php } ?>
