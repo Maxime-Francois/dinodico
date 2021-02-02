@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/bd25e66059.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <title>Dinodico</title>
+</head>
+<body>
+   <!---NAVBAR---->
+
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="#!">DINODICO</a>
+        </div>
+        <nav>
+          <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+          <ul class="nav-list">
+           <li>
+              <a href="#!">Liste</a>
+            </li>
+            <li>
+              <a href="#!">Types</a>
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="#!">carnivore</a>
+                </li>
+                <li>
+                  <a href="#!">herbivore</a>
+                </li>
+                <li>
+                  <a href="#!">aquatique</a>
+                </li>
+                <li>
+                  <a href="#!">volant</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="search-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+              </li>
+            
+            
+          </ul>
+        </nav>
+      </div>
+    </section>
+    
+   
+
+   
+    
+     <!---CARDS--->
+     <main>
+      <div class="card bg-dark text-white" class="cards">
+        <img class="card-img"  src="img/t-rex.jpeg" alt="Card image">
+        
+
+        </div>
+      </div>
+    
+        <article class="card bg-light mb-3" >
+          <div class="card-header"><p>Tyrannosaure</p></div>
+          <div class="card-body">
+            <h5 class="card-title">Light card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        
+        </article>
+ <!---script handle the dropdowns and the toggle of the nav-->   
+
+<script>
+  (function($) { // Begin jQuery
+    $(function() { // DOM ready
+      // If a link has a dropdown, add sub menu toggle.
+      $('nav ul li a:not(:only-child)').click(function(e) {
+        $(this).siblings('.nav-dropdown').toggle();
+        // Close one dropdown when selecting another
+        $('.nav-dropdown').not($(this).siblings()).hide();
+        e.stopPropagation();
+      });
+      // Clicking away from dropdown will remove the dropdown class
+      $('html').click(function() {
+        $('.nav-dropdown').hide();
+      });
+      // Toggle open and close nav styles on click
+      $('#nav-toggle').click(function() {
+        $('nav ul').slideToggle();
+      });
+      // Hamburger to X toggle
+      $('#nav-toggle').on('click', function() {
+        this.classList.toggle('active');
+      });
+    }); // end DOM ready
+  })(jQuery); // end jQuery
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

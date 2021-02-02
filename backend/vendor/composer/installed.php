@@ -6,64 +6,55 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'a006661acdee37f91a6584f2386366e825bc2f0a',
-    'name' => 'fabio/pokedex',
+    'reference' => '382ee031eb7e0ed49d7821f58cb26d5fc5976627',
+    'name' => 'mass/dinodico',
   ),
   'versions' => 
   array (
     'altorouter/altorouter' => 
     array (
-      'pretty_version' => '2.0.1',
-      'version' => '2.0.1.0',
+      'pretty_version' => 'v1.2.0',
+      'version' => '1.2.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '127f6e96998708a31ef32252985bea82e3b03888',
+      'reference' => '39c50092470128c12284d332bb57f306bb5b58e4',
     ),
-    'benoclock/alto-dispatcher' => 
-    array (
-      'pretty_version' => '1.1',
-      'version' => '1.1.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'aa05d13d92ae7ac984ec4e63ff439f57fe1efb3d',
-    ),
-    'fabio/pokedex' => 
+    'mass/dinodico' => 
     array (
       'pretty_version' => 'dev-master',
       'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => 'a006661acdee37f91a6584f2386366e825bc2f0a',
+      'reference' => '382ee031eb7e0ed49d7821f58cb26d5fc5976627',
     ),
     'symfony/polyfill-mbstring' => 
     array (
-      'pretty_version' => 'v1.18.1',
-      'version' => '1.18.1.0',
+      'pretty_version' => 'v1.22.0',
+      'version' => '1.22.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a6977d63bf9a0ad4c65cd352709e230876f9904a',
+      'reference' => 'f377a3dd1fde44d37b9831d68dc8dea3ffd28e13',
     ),
     'symfony/polyfill-php80' => 
     array (
-      'pretty_version' => 'v1.18.1',
-      'version' => '1.18.1.0',
+      'pretty_version' => 'v1.22.0',
+      'version' => '1.22.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd87d5766cbf48d72388a9f6b85f280c8ad51f981',
+      'reference' => 'dc3063ba22c2a1fd2f45ed856374d79114998f91',
     ),
     'symfony/var-dumper' => 
     array (
-      'pretty_version' => 'v5.1.5',
-      'version' => '5.1.5.0',
+      'pretty_version' => 'v5.2.1',
+      'version' => '5.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b43a3905262bcf97b2510f0621f859ca4f5287be',
+      'reference' => '13e7e882eaa55863faa7c4ad7c60f12f1a8b5089',
     ),
   ),
 );
