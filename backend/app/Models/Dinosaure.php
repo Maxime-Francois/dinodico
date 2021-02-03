@@ -41,7 +41,7 @@ class Dinosaure extends CoreModel
                 dinosaures.numero as numero
             FROM type
             JOIN dinosaure_type ON dinosaure_type.type_id = type.id
-            JOIN dinosaures ON dinosaure_type.dinosaure_numero = dinosaure.numero
+            JOIN dinosaures ON dinosaure_type.dinosaure_numero = dinosaures.numero
             WHERE type.id = ' . $id
             ;
 
