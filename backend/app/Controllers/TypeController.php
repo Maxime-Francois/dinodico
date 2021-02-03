@@ -9,7 +9,7 @@ class TypeController extends CoreController
 {
     public function types($params) {
         $type = new Type();
-        $this->show('types-list', [
+        $this->show('type-list', [
             'types' => $type->findAll(),
         ]);
     }

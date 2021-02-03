@@ -2,7 +2,7 @@
 
 namespace Dinodico\Models;
 
-use dinodico\Utils\Database;
+use Dinodico\Utils\Database;
 
 class Type extends CoreModel
 {

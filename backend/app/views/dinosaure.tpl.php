@@ -1,4 +1,4 @@
-<h2>Détails de <?=$dinosaure->getnom()?></h2>
+<!---<h2>Détails de <?=$dinosaure->getnom()?></h2>
 <div class="pokemon-details">
     <div class="pokemon-image">
         <img src="<?=$baseUri?>/assets/img/<?=$pokemon->getNumero()?>.png" alt="Image du pokémon">
