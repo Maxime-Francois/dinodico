@@ -261,6 +261,10 @@ body {
   
    
   }
+  .card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
 
   
   main {    
@@ -271,7 +275,7 @@ body {
   
   
 
-  button.btn.btn-primary{
+  a.btn.btn-primary{
     
     width: 300px;
     height: 50px;
@@ -284,7 +288,7 @@ body {
     border-radius: 30px;
     background-color: #262626;
   }
-  button.btn.btn-primary:hover{
+  a.btn.btn-primary:hover{
       color: rgb(49, 175, 24);
   }
   
@@ -348,3 +352,20 @@ article.zoom{
  p{
      margin-top: 50px;
  }
+ .column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.detail-dino{
+  padding-bottom: 400px;
+  margin-top: 30px;
+  margin-left:20px;
+  margin-right: 20px;
+}

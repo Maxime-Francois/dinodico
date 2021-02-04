@@ -63,7 +63,7 @@ class Dinosaure extends CoreModel
                 type.*
             FROM type
             JOIN dinosaure_type ON dinosaure_type.type_id = type.id
-            JOIN dinosaures ON dinosaure_type.dinosaure_numero = dinosaure.numero
+            JOIN dinosaures ON dinosaure_type.dinosaure_numero = dinosaures.numero
             WHERE dinosaures.id = ' . $id
             ;
         return (Database::getPDO()->query($sql)->fetchAll(\PDO::FETCH_CLASS, Type::class));
@@ -82,7 +82,13 @@ class Dinosaure extends CoreModel
         return $this->taille;
     }
 
-   
+   /**
+     * Get the value of poids
+     */ 
+    public function getPoids()
+    {
+        return $this->poids;
+    }
 
     /**
      * Get the value of numero

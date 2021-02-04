@@ -2,7 +2,7 @@
 
 namespace Dinodico\Controllers;
 
-use Dinodico\Models\Pokemon;
+use Dinodico\Models\Dinosaure;
 
 class DinosaureController extends CoreController
 {

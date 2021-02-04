@@ -4,9 +4,7 @@
         <article class="zoom">
           <img  class ="article-img"src="<?=$baseUri?>/assets/img/<?=$dinosaure->getNumero()?>.jpg" alt="Image du dinosaure">
           
-          <button type="button" class="btn btn-primary" ><?= $dinosaure->getNom()?> 
-         
-          </button>
+          <a  class="btn btn-primary" href="<?=$router->generate('dinosaures', ['id' => $dinosaure->getId()])?>" role="button" ><?= $dinosaure->getNom()?> </a>
          </article>
          
 <?php } ?>
