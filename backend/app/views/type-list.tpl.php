@@ -1,10 +1,10 @@
 <!----TODO---->
-<p>Cliquez sur un type pour voir tous les Pokémons de ce type</p>
+<h1>Cliquez sur un type pour voir tous les dinosaures de ce type</h1>
 
-<ul class="type-list">
+<ul class="types-list">
     <?php foreach ($types as $type) { ?>
     <li>
-        <a style="background-color: #<?=$type->getColor()?>" href="<?=$router->generate('type', ['id' => $type->getId()])?>">
+   <a style="background-color: #<?=$type->getColor()?>" href="<?=$router->generate('type', ['id' => $type->getId()])?>">
             <?=$type->getName()?>
         </a>
     </li>

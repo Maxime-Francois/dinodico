@@ -213,7 +213,7 @@ body {
     font-size: 62.5%;
     font-size: 8px;
     background-image: url(../../img/conifer-1867371_1920.jpg);
-    background-color: grey;
+    background-color: rgb(255, 255, 255);
     
 }
 
@@ -368,4 +368,45 @@ article.zoom{
   margin-top: 30px;
   margin-left:20px;
   margin-right: 20px;
+}
+.types-list li {
+  display: inline-block;
+  width: 24.7%;
+  padding: 0.3rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+.types-list a {
+  display: block;
+}
+.types-list a {
+  color: white;
+  text-decoration: none;
+}
+.types-list {
+  padding-left: 0;
+}
+
+.types-list a {
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+h1{
+  padding-top: 30px;
+  text-align: center;
+  
+}
+.dinosaure-type li {
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+  font-size: 2rem;
+}
+footer {
+  text-align: center;
+  
+    font-size: 2rem;
 }
