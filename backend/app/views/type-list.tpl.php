@@ -4,7 +4,7 @@
 <ul class="types-list">
     <?php foreach ($types as $type) { ?>
     <li>
-   <a style="background-color: #<?=$type->getColor()?>" href="<?=$router->generate('type', ['id' => $type->getId()])?>">
+   <a   style="background-color: #<?=$type->getColor()?>" href="<?=$router->generate('type', ['id' => $type->getId()])?>">
             <?=$type->getName()?>
         </a>
     </li>
