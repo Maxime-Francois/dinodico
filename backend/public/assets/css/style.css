@@ -212,7 +212,11 @@ body {
     font-family: "Quicksand", sans-serif;
     font-size: 62.5%;
     font-size: 8px;
-    background-image: url(../../img/conifer-1867371_1920.jpg);
+    background-image: url(../../assets/img/SHX9-117_1568286488.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     background-color: rgb(255, 255, 255);
     
 }
