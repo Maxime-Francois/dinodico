@@ -13,6 +13,8 @@ $router->map('GET', '/type/[i:id]', 'TypeController#type', 'type');
 $router->map('GET', '/admin', 'AdminController#home', 'admin');
 $router->map('GET', '/admin/category', 'CategoryController#categories', 'category');
 $router->map('GET', '/admin/category/add', 'CategoryAddController#categoryAdd', 'category-add');
+$router->map('GET', '/admin/product', 'ProductController#products', 'product');
+$router->map('GET', '/admin/product/add', 'ProductAddController#productAdd', 'product-add');
 
 $match = $router->match();
 

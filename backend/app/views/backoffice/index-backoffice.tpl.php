@@ -6,7 +6,7 @@
 
         <div class="row mt-5">
             <div class="col-12 col-md-6">
-                <div class="card text-white mb-3" style="height: 320px;">
+                <div class="card text-white mb-3" style="height: 360px;">
                     <div class="card-header bg-primary">Liste des catégories</div>
                     <div class="card-body">
                         <table class="table table-hover">
@@ -27,7 +27,7 @@
                                         </a>
                                         <!-- Example single danger button -->
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-md btn-danger dropdown-toggle"
+                                            <button type="button" class="btn btn-lg btn-danger dropdown-toggle"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fa fa-trash-o" aria-hidden="true"></i>
                                             </button>
@@ -42,12 +42,12 @@
                                     <th scope="row">2</th>
                                     <td>Au travail</td>
                                     <td class="text-right">
-                                        <a href="" class="btn btn-sm btn-warning">
+                                        <a href="" class="btn btn-lg btn-warning">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                         <!-- Example single danger button -->
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-danger dropdown-toggle"
+                                            <button type="button" class="btn btn-lg btn-danger dropdown-toggle"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fa fa-trash-o" aria-hidden="true"></i>
                                             </button>
@@ -62,12 +62,12 @@
                                     <th scope="row">3</th>
                                     <td>Cérémonie</td>
                                     <td class="text-right">
-                                        <a href="" class="btn btn-sm btn-warning">
+                                        <a href="" class="btn btn-lg btn-warning">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                         <!-- Example single danger button -->
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-danger dropdown-toggle"
+                                            <button type="button" class="btn btn-lg btn-danger dropdown-toggle"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fa fa-trash-o" aria-hidden="true"></i>
                                             </button>
@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <div class="card text-white mb-3" style="height: 320px;">
+                <div class="card text-white mb-3" style="height: 360px;">
                     <div class="card-header bg-primary">Liste des produits</div>
                     <div class="card-body">
                         <table class="table table-hover">
@@ -101,12 +101,12 @@
                                     <th scope="row">1</th>
                                     <td>Kissing</td>
                                     <td class="text-right">
-                                        <a href="" class="btn btn-sm btn-warning">
+                                        <a href="" class="btn btn-lg btn-warning">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                         <!-- Example single danger button -->
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-danger dropdown-toggle"
+                                            <button type="button" class="btn btn-lg btn-danger dropdown-toggle"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fa fa-trash-o" aria-hidden="true"></i>
                                             </button>
@@ -121,12 +121,12 @@
                                     <th scope="row">2</th>
                                     <td>Pink Lady</td>
                                     <td class="text-right">
-                                        <a href="" class="btn btn-sm btn-warning">
+                                        <a href="" class="btn btn-lg btn-warning">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                         <!-- Example single danger button -->
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-danger dropdown-toggle"
+                                            <button type="button" class="btn btn-lg btn-danger dropdown-toggle"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fa fa-trash-o" aria-hidden="true"></i>
                                             </button>
@@ -141,12 +141,12 @@
                                     <th scope="row">3</th>
                                     <td>Panda</td>
                                     <td class="text-right">
-                                        <a href="" class="btn btn-sm btn-warning">
+                                        <a href="" class="btn btn-lg btn-warning">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                         <!-- Example single danger button -->
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-danger dropdown-toggle"
+                                            <button type="button" class="btn btn-lg btn-danger dropdown-toggle"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fa fa-trash-o" aria-hidden="true"></i>
                                             </button>
@@ -159,7 +159,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <a href="" class="btn btn-block btn-success">voir plus</a>
+                        <a href="<?= $router->generate('product') ?>" class="btn btn-block btn-success">voir plus</a>
                     </div>
                 </div>
             </div>
