@@ -92,7 +92,7 @@ nav ul li ul li a {
    .search-container button {
     float: right;
     padding: 6px 10px;
-    margin-top: 22px;
+    margin-top: 25px;
     margin-right: 16px;
     background: #ddd;
     font-size: 17px;
@@ -419,4 +419,71 @@ footer {
 a {
   color: #ffffff;
   text-decoration-style: initial;
+}
+
+.col-actions {
+ width: 60px;
+}
+@media screen and (min-width: 1200px){
+
+
+.container-xl.my-2 {
+   max-width: 1500px;
+   
+}
+}
+.card-body{
+ font-size: 3rem;
+}
+.btn-block{
+ height: 50px;
+ font-size: 3rem;
+}
+.float-right {
+ float: right!important;
+ font-size: 3rem;
+}
+.table{
+ font-size: 3rem;
+
+}
+.categories-list{
+ background-color: #ffffff;
+ font-size: 3rem;
+}
+input[type=text] {
+ padding: 6px;
+ margin-top: 22px;
+ font-size: 17px;
+ border: none;
+ border-color: black;
+ border-style: solid;
+}
+a.btn.btn-block.btn-success{
+  width: 100%;
+  font-size: 3rem;
+  padding: auto 10px;
+}
+a.btn.btn-success{
+  height: 40px;
+  width: 20%;
+  font-size: 2.5rem;
+  margin-top: 7px;
+  
+  
+ 
+
+ 
+  
+  
+}
+p.display-2{
+  color: white;
+  
+}
+
+button.btn.btn-primary.btn-block{
+  font-size: 2rem;
+  width: 200px;
+  
 }

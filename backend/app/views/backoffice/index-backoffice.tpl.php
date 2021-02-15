@@ -6,7 +6,7 @@
 
         <div class="row mt-5">
             <div class="col-12 col-md-6">
-                <div class="card text-white mb-3" style="height: 340px;">
+                <div class="card text-white mb-3" style="height: 320px;">
                     <div class="card-header bg-primary">Liste des catégories</div>
                     <div class="card-body">
                         <table class="table table-hover">
@@ -80,12 +80,12 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <a href="categories.html" class="btn btn-block btn-success">Voir plus</a>
+                        <a href="<?= $router->generate('category') ?>" class="btn btn-block btn-success">Voir plus</a>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <div class="card text-white mb-3" style="height: 340px;">
+                <div class="card text-white mb-3" style="height: 320px;">
                     <div class="card-header bg-primary">Liste des produits</div>
                     <div class="card-body">
                         <table class="table table-hover">
@@ -159,7 +159,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <a href="products.html" class="btn btn-block btn-success">Voir plus</a>
+                        <a href="" class="btn btn-block btn-success">voir plus</a>
                     </div>
                 </div>
             </div>
