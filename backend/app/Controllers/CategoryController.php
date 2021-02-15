@@ -3,6 +3,7 @@
 namespace Dinodico\Controllers;
 
 use Dinodico\Models\Dinosaure;
+use Dinodico\Models\Type;
 
 
 class CategoryController extends CoreController
@@ -15,8 +16,12 @@ class CategoryController extends CoreController
     public function categories($params) {
 
        // $dinosaure = new Dinosaure();
+       
+        $types = type::findall();
 
+        
         $this->show('backoffice/categories-backoffice', [
+            'types' => $types
         
         ]);
     }

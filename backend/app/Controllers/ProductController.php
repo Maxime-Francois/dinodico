@@ -15,9 +15,10 @@ class ProductController extends CoreController
     public function products($params) {
 
        // $dinosaure = new Dinosaure();
+        $dinosaures = Dinosaure::findAll();
 
         $this->show('backoffice/product-backoffice', [
-        
+            'dinosaures' => $dinosaures
         ]);
     }
     

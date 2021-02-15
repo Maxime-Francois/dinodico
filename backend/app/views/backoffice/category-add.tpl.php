@@ -2,7 +2,7 @@
 
     <div class="container my-4">
         <p class="display-2">
-            Ajouter une<strong>  catégorie</strong>
+            Ajouter un<strong>  type</strong>
         </p>
         <div class="categories-list">
         <a href="<?= $router->generate('admin') ?>" class="btn btn-success float-right">Retour</a>

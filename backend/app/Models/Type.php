@@ -9,7 +9,7 @@ class Type extends CoreModel
     private $name;
     private $color;
     
-    public function findAll()
+    public static function findAll()
     {
         $sql = '
             SELECT *

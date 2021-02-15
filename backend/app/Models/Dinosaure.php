@@ -7,22 +7,21 @@ use Dinodico\Utils\Database;
 class Dinosaure extends CoreModel
 {
     private $nom;
-    
     private $taille;
     private $poids;
-   
     private $numero;
+    private $picture;
 
-    public function findAll()
+    public static function findAll()
     {
         $sql = '
-            SELECT id, nom, numero
+            SELECT *
             FROM dinosaures
             ';
         return (Database::getPDO()->query($sql)->fetchAll(\PDO::FETCH_CLASS, Dinosaure::class));
     }
 
-    public function find($id)
+    public static function find($id)
     {
         $sql = '
             SELECT *
@@ -47,14 +46,6 @@ class Dinosaure extends CoreModel
 
         return (Database::getPDO()->query($sql)->fetchAll(\PDO::FETCH_CLASS, Dinosaure::class));
     }
-        
-    /**
-     * Get the value of nom
-     */ 
-    public function getNom()
-    {
-        return $this->nom;
-    }
     
     public function getTypes($id)
     {
@@ -68,6 +59,15 @@ class Dinosaure extends CoreModel
             ;
         return (Database::getPDO()->query($sql)->fetchAll(\PDO::FETCH_CLASS, Type::class));
     }
+    
+    /**
+     * Get the value of nom
+     */ 
+    public function getNom()
+    {
+        return $this->nom;
+    }
+    
 
     public function getPercentStat($statNumber) {
         return ($statNumber * 100) / 255;
@@ -96,6 +96,22 @@ class Dinosaure extends CoreModel
     public function getNumero()
     {
         return $this->numero;
+    }
+
+    
+    public function getPicture()
+    {
+        return $this->picture;
+    }
+
+    /**
+     * Set the value of picture
+     *
+     * @param  string  $picture
+     */
+    public function setPicture(string $picture)
+    {
+        $this->picture = $picture;
     }
 
 }
