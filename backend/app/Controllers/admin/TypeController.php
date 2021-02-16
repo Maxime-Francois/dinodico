@@ -9,7 +9,7 @@ use Dinodico\Models\Type;
 class TypeController extends CoreController
 {
       /**
-     * Méthode s'occupant de la page d'accueil
+     * Méthode s'occupant de laffichage de la liste des categories
      *
      * @return void
      */
@@ -29,7 +29,7 @@ class TypeController extends CoreController
    
 
      /**
-     * Méthode s'occupant d'éditer une categorie
+     * Méthode s'occupant d'afficher le formulaire pour éditer une categorie
      *
      * 
      */
@@ -37,13 +37,30 @@ class TypeController extends CoreController
      
      
     }
+     /**
+     * Méthode s'occupant d'éditer une categorie
+     *
+     * 
+     */
+    public function editAdd() {
+     
+     
+    }
     
     /**
-     * Méthode s'occupant de suprimer une categorie
+     * Méthode s'occupant d'afficher le formulaire pour supprimer une categorie
      *
      * 
      */
     public function delete() {
+        
+    }
+     /**
+     * Méthode s'occupant de supprimer une categorie
+     *
+     * 
+     */
+    public function deleteAdd() {
         
     }
     

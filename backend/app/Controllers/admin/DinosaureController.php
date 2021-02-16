@@ -37,6 +37,18 @@ class DinosaureController extends CoreController
         ]);
     }
     
+
+    /**
+     * Méthode s'occupant de l'ajout d'un dinosaure
+     *
+     * @return void
+     */
+    public function add($params) {
+
+        
+     }
+
+     
     public function error404() {
         echo ('404');
     }

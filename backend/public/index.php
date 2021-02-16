@@ -13,10 +13,14 @@ $router->map('GET', '/type/[i:id]', 'TypeController#type', 'type');
 $router->map('GET', '/admin', 'admin\AdminController#home', 'admin');
 $router->map('GET', '/admin/category', 'admin\TypeController#categories', 'category');
 $router->map('GET', '/admin/category/add', 'admin\TypeController#categoryAdd', 'category-add');
+$router->map('POST', '/admin/category/add', 'admin\TypeController#add', 'add-category');
 $router->map('GET', '/admin/category/[i:id]/edit', 'admin\TypeController#edit', 'category-edit');
+$router->map('POST', '/admin/category/[i:id]/edit', 'admin\TypeController#editAdd', 'edit-category');
 $router->map('GET', '/admin/category/[i:id]/delete', 'admin\TypeController#delete', 'category-delete');
+$router->map('POST', '/admin/category/[i:id]/delete', 'admin\TypeController#deleteAdd', 'delete-category');
 $router->map('GET', '/admin/product', 'admin\DinosaureController#products', 'product');
 $router->map('GET', '/admin/product/add', 'admin\DinosaureController#productAdd', 'product-add');
+$router->map('POST', '/admin/product/add', 'admin\DinosaureController#add', 'add-product');
 
 $match = $router->match();
 
