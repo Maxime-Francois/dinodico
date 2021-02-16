@@ -10,11 +10,13 @@ $router->map('GET', '/', 'MainController#home', 'home');
 $router->map('GET', '/dinosaure/[i:id]', 'DinosaureController#dinosaure', 'dinosaures');
 $router->map('GET', '/types', 'TypeController#types', 'types');
 $router->map('GET', '/type/[i:id]', 'TypeController#type', 'type');
-$router->map('GET', '/admin', 'AdminController#home', 'admin');
-$router->map('GET', '/admin/category', 'CategoryController#categories', 'category');
-$router->map('GET', '/admin/category/add', 'CategoryAddController#categoryAdd', 'category-add');
-$router->map('GET', '/admin/product', 'ProductController#products', 'product');
-$router->map('GET', '/admin/product/add', 'ProductAddController#productAdd', 'product-add');
+$router->map('GET', '/admin', 'admin\AdminController#home', 'admin');
+$router->map('GET', '/admin/category', 'admin\TypeController#categories', 'category');
+$router->map('GET', '/admin/category/add', 'admin\TypeController#categoryAdd', 'category-add');
+$router->map('GET', '/admin/category/[i:id]/edit', 'admin\TypeController#edit', 'category-edit');
+$router->map('GET', '/admin/category/[i:id]/delete', 'admin\TypeController#delete', 'category-delete');
+$router->map('GET', '/admin/product', 'admin\DinosaureController#products', 'product');
+$router->map('GET', '/admin/product/add', 'admin\DinosaureController#productAdd', 'product-add');
 
 $match = $router->match();
 

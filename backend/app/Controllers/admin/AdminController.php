@@ -1,24 +1,23 @@
 <?php
 
-namespace Dinodico\Controllers;
+namespace Dinodico\Controllers\admin;
 
 use Dinodico\Models\Dinosaure;
 
 
-class ProductController extends CoreController
+class AdminController extends CoreController
 {
       /**
      * Méthode s'occupant de la page d'accueil
      *
      * @return void
      */
-    public function products($params) {
+    public function home($params) {
 
        // $dinosaure = new Dinosaure();
-        $dinosaures = Dinosaure::findAll();
 
-        $this->show('backoffice/product-backoffice', [
-            'dinosaures' => $dinosaures
+        $this->show('backoffice/index-backoffice', [
+        
         ]);
     }
     
