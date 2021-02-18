@@ -2,7 +2,7 @@
 
     <div class="container my-4">
         <p class="display-2">
-            Ajouter un<strong>  produit</strong>
+            Ajouter un<strong>  Dinosaure</strong>
         </p>
         <div class="categories-list">
         <a href="<?= $router->generate('admin') ?>" class="btn btn-success float-right">Retour</a>
@@ -10,24 +10,28 @@
         
         <form action="" method="POST" class="mt-5">
             <div class="form-group">
-                <label for="name">Nom</label>
-                <input type="text" class="form-control" id="name" placeholder="Nom de la catégorie">
+                <label for="nom">Nom</label>
+                <input type="text" class="form-control" id="nom"name="nom" placeholder="Nom de la catégorie">
             </div>
             <div class="form-group">
-                <label for="name">categorie</label>
-                <input type="text" class="form-control" id="name" placeholder="Nom de la catégorie">
+                <label for="types">Type</label>
+                <select  class="custom-select" id="types"name="types" >
+                    <?php foreach($types as $type): ?>
+                        <option value="<?=$type->getId() ?>"><?= $type->getName() ?></option>
+                        <?php endforeach; ?>
+                </select>
             </div>
             <div class="form-group">
-                <label for="name">taille</label>
-                <input type="text" class="form-control" id="name" placeholder="Nom de la catégorie">
+                <label for="taille">taille</label>
+                <input type="text" class="form-control" id="taille"name="taille" placeholder="Nom du dinosaure">
             </div>
             <div class="form-group">
-                <label for="name">poids</label>
-                <input type="text" class="form-control" id="name" placeholder="Nom de la catégorie">
+                <label for="poids">poids</label>
+                <input type="text" class="form-control" id="poids"name="poids"placeholder="poids du dinosaure">
             </div>
             <div class="form-group">
                 <label for="picture">Image</label>
-                <input type="file" class="form-control" id="picture"  aria-describedby="pictureHelpBlock"
+                <input type="file" class="form-control" id="picture" name="picture" aria-describedby="pictureHelpBlock"
                 accept="image/png, image/jpeg">
                 <small id="pictureHelpBlock" class="form-text text-muted">
                     

@@ -6,7 +6,7 @@
 
         <div class="row mt-5">
             <div class="col-12 col-md-6">
-                <div class="card text-white mb-3" style="height: 360px;">
+                <div class="card text-white mb-3" style="">
                     <div class="card-header bg-primary">Liste des catégories</div>
                     <div class="card-body">
                         <table class="table table-hover">
@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <div class="card text-white mb-3" style="height: 360px;">
+                <div class="card text-white mb-3" style="">
                     <div class="card-header bg-primary">Liste des produits</div>
                     <div class="card-body">
                         <table class="table table-hover">

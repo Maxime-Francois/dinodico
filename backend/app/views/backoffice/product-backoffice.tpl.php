@@ -4,7 +4,7 @@
         <p class="display-2">
             liste des <strong>dinosaures</strong>
         </p>
-        <div class="card text-white mb-3" style="height: 470px;">
+        <div class="card text-white mb-3" style="">
         
         <a href="<?= $router->generate('admin') ?>" class="btn btn-success float-right">Retour</a>
         <table class="table table-hover mt-4">
