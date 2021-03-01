@@ -17,7 +17,7 @@ class TypeController extends CoreController
     public function type($params) {
         $dinosaure = new Dinosaure();
 
-        $this->show('index', [
+        $this->show('type-single', [
             'dinosaures' => $dinosaure->findAllFromType($params['id']),
         ]);
     }

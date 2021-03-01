@@ -18,6 +18,7 @@ class Type extends CoreModel
         return (Database::getPDO()->query($sql)->fetchAll(\PDO::FETCH_CLASS, Type::class));
     }
 
+    
 
     public function insert()
     {

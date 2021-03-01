@@ -1,7 +1,7 @@
 <div class="detail-dino">
   <div class="row">
         <div class="col">
-            <img src="<?=$baseUri?>/assets/img/<?=$dinosaure->getNumero()?>.jpg" alt="..."style="
+            <img src="<?=$dinosaure->getPicture()?>" alt="..."style="
     width: 800px;
     height: 500px;
     background-position: 50% 50%;
@@ -14,8 +14,8 @@
     
         <div class="col">
             <div class="card" style="">
-                <div class="card-header"><?=$dinosaure->getnom()?></div>
-                    <div class="card-body">
+                <div class="card-header"><?=$dinosaure->getnom()?></div> 
+                    <div class="card-body"> 
                         
                         <ul>
                             <div class="dinosaure-type">

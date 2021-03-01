@@ -15,11 +15,11 @@ class DinosaureController extends CoreController
      */
     public function products($params) {
 
-        // $dinosaure = new Dinosaure();
-         $dinosaures = Dinosaure::findAll();
+         $dinosaures = new Dinosaure();
  
          $this->show('backoffice/product-backoffice', [
-             'dinosaures' => $dinosaures
+             'dinosaures' => $dinosaures->findAll(),
+            //  'types' => $dinosaures->getTypes($params[])
          ]);
      }
 
@@ -54,19 +54,22 @@ class DinosaureController extends CoreController
     $taille = filter_input(INPUT_POST, 'taille', FILTER_SANITIZE_STRING);
     $poids = filter_input(INPUT_POST, 'poids', FILTER_SANITIZE_STRING);
     // $picture = filter_input(INPUT_POST, 'picture', FILTER_SANITIZE_STRING);
-    $types = filter_input(INPUT_POST, 'types', FILTER_SANITIZE_STRING);
+    $type = filter_input(INPUT_POST, 'type', FILTER_SANITIZE_STRING);
+   
+    $picture = filter_input(INPUT_POST, 'picture', FILTER_VALIDATE_URL);
+    
     
 
     //on créer un nouvel objet type    
-      $dinosaure = new dinosaure();
+      $dinosaure = new Dinosaure();
 
       // ont attribut a ses propriétées les donnée en POST
       $dinosaure->setNom($nom);
       $dinosaure->setTaille($taille);
       $dinosaure->setPoids($poids);
-      $dinosaure->setTypes($types);
-      
-      
+      $dinosaure->setTypes($type);
+      $dinosaure->setPicture($picture);
+
 
     //ont insère l'objet a la base de donnée
       $dinosaure->insert();

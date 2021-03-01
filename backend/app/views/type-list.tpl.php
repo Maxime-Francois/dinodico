@@ -1,5 +1,5 @@
 <!----TODO---->
-<h1>Cliquez sur un type pour voir tous les dinosaures de ce type</h1>
+<h1 style="color:white;">Cliquez sur un type pour voir tous les dinosaures de ce type</h1>
 
 <ul class="types-list">
     <?php foreach ($types as $type) { ?>

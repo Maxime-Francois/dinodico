@@ -15,6 +15,8 @@
                     <!-- <th scope="col">image</th> -->
                     <th scope="col">taille</th>
                     <th scope="col">poids</th>
+                    <th scope="col">image</th>
+                    
                     <th scope="col"></th>
                     
                 </tr>
@@ -26,6 +28,9 @@
                     <td><?=$dinosaure->getNom() ?></td>
                     <td><?=$dinosaure->getTaille() ?></td>
                     <td><?=$dinosaure->getPoids() ?></td>
+                    
+                    
+                    <td><img src="<?=  $dinosaure->getPicture() ?>" width="50"></td>
                     <td class="text-right">
                         <a href="" class="btn btn-lg btn-warning">
                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
@@ -50,18 +55,4 @@
   <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
 </svg></a>
     </div>
-      </div>
-
-    <!-- And for every user interaction, we import Bootstrap JS components -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
-</body>
-
-</html>
+</div>

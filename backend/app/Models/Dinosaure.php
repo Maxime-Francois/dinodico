@@ -3,15 +3,17 @@
 namespace Dinodico\Models;
 
 use Dinodico\Utils\Database;
+use Dinodico\Models\Type;
 
 class Dinosaure extends CoreModel
 {
+
     private $nom;
     private $taille;
-    private $types;
     private $poids;
     private $numero;
     private $picture;
+    private $type_id;
 
     public static function findAll()
     {
@@ -38,36 +40,29 @@ class Dinosaure extends CoreModel
             SELECT
                 dinosaures.id as id,
                 dinosaures.nom as nom,
-                dinosaures.numero as numero
+                dinosaures.picture as picture
             FROM type
             JOIN dinosaure_type ON dinosaure_type.type_id = type.id
-            JOIN dinosaures ON dinosaure_type.dinosaure_numero = dinosaures.numero
+            JOIN dinosaures ON dinosaure_type.dinosaure_id = dinosaures.id
             WHERE type.id = ' . $id
             ;
 
         return (Database::getPDO()->query($sql)->fetchAll(\PDO::FETCH_CLASS, Dinosaure::class));
     }
     
-    
-
-    
-
-
-    public function getTypes($id)
-    {
-        $sql = '
-            SELECT
-                type.*
-            FROM type
-            JOIN dinosaure_type ON dinosaure_type.type_id = type.id
-            JOIN dinosaures ON dinosaure_type.dinosaure_numero = dinosaures.numero
-            WHERE dinosaures.id = ' . $id
-            ;
+     public function getTypes($id)
+     {
+         $sql = '
+             SELECT
+                 type.*
+             FROM type
+             JOIN dinosaure_type ON dinosaure_type.type_id = type.id
+             JOIN dinosaures ON dinosaure_type.dinosaure_id = dinosaures.id
+             WHERE dinosaures.id = ' . $id
+             ;
       
-            return (Database::getPDO()->query($sql)->fetchAll(\PDO::FETCH_CLASS, Type::class));
-    }
-
-
+             return (Database::getPDO()->query($sql)->fetchAll(\PDO::FETCH_CLASS, Type::class));
+     }
 
     public function insert()
     {
@@ -76,8 +71,8 @@ class Dinosaure extends CoreModel
 
         // Ecriture de la requête INSERT INTO
         $sql = "
-            INSERT INTO `dinosaures` (nom, taille, poids)
-            VALUES ('{$this->nom}', '{$this->taille}', '{$this->poids}')
+            INSERT INTO `dinosaures` (nom, taille, poids, picture)
+            VALUES ('{$this->nom}', '{$this->taille}', '{$this->poids}', '{$this->picture}' )
         ";
 
         // Execution de la requête d'insertion (exec, pas query)
@@ -97,17 +92,6 @@ class Dinosaure extends CoreModel
         return false;
     }
 
-
-    /**
-     * Set the value of Types
-     *
-     * @param  string  $types
-     */
-    public function setTypes(string $types)
-    {
-        $this->types = $types;
-    }
-
     /**
      * Get the value of nom
      */ 
@@ -120,14 +104,28 @@ class Dinosaure extends CoreModel
      *
      * @param  string  $name
      */
-    public function setNom( string $nom)
+    public function setNom(string $nom)
     {
         $this->nom = $nom;
     }
-    
 
+    /**
+     * Get the value of type_id
+     */ 
+    public function getTypeId()
+    {
+        return $this->type_id;
+    }
+    /**
+     * Set the value of type_id
+     *
+     * @param  int $type_id
+     */
+    public function setTypeId(int $type_id)
+    {
+        $this->type_id = $type_id;
+    }
     
-
     /**
      * Get the value of taille
      */ 
@@ -187,6 +185,11 @@ class Dinosaure extends CoreModel
     public function setPicture(string $picture)
     {
         $this->picture = $picture;
+    }
+
+    public function setTypes(string $type)
+    {
+        $this->type = $type;
     }
 
 }

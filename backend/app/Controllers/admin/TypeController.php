@@ -17,7 +17,7 @@ class TypeController extends CoreController
 
        // $dinosaure = new Dinosaure();
        
-        $types = type::findall();
+        $types = Type::findall();
 
         
         $this->show('backoffice/categories-backoffice', [
