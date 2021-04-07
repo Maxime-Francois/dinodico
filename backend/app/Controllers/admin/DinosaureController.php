@@ -13,11 +13,11 @@ class DinosaureController extends CoreController
      *
      * @return void
      */
-    public function products($params) {
+    public function dinosaureList($params) {
 
          $dinosaures = new Dinosaure();
  
-         $this->show('backoffice/product-backoffice', [
+         $this->show('backoffice/dinosaure-list', [
              'dinosaures' => $dinosaures->findAll(),
             //  'types' => $dinosaures->getTypes($params[])
          ]);
@@ -29,11 +29,11 @@ class DinosaureController extends CoreController
      *
      * @return void
      */
-    public function productAdd($params) {
+    public function dinosaureForm($params) {
 
-       // $dinosaure = new Dinosaure();
        
-        $this->show('backoffice/product-add', [
+       
+        $this->show('backoffice/dinosaure-form', [
             'types' => type::findAll(),
         
         ]);
@@ -53,15 +53,14 @@ class DinosaureController extends CoreController
     $nom = filter_input(INPUT_POST, 'nom', FILTER_SANITIZE_STRING);
     $taille = filter_input(INPUT_POST, 'taille', FILTER_SANITIZE_STRING);
     $poids = filter_input(INPUT_POST, 'poids', FILTER_SANITIZE_STRING);
-    // $picture = filter_input(INPUT_POST, 'picture', FILTER_SANITIZE_STRING);
-    $type = filter_input(INPUT_POST, 'type', FILTER_SANITIZE_STRING);
-   
+   $type = filter_input(INPUT_POST, 'type', FILTER_SANITIZE_NUMBER_INT);
     $picture = filter_input(INPUT_POST, 'picture', FILTER_VALIDATE_URL);
     
     
 
-    //on créer un nouvel objet type    
+    //on créer un nouvel objet dinosaure    
       $dinosaure = new Dinosaure();
+      
 
       // ont attribut a ses propriétées les donnée en POST
       $dinosaure->setNom($nom);
@@ -70,14 +69,16 @@ class DinosaureController extends CoreController
       $dinosaure->setTypes($type);
       $dinosaure->setPicture($picture);
 
-
+      dump($dinosaure);
+     
     //ont insère l'objet a la base de donnée
-      $dinosaure->insert();
+     $dinosaure->insert();
+      
 
     
 
-    //ont redirige apres soumission du formulaire a la liste des types
-    header('Location: http://localhost:8888/Dinodico/backend/public/admin/product');
+    //ont redirige apres soumission du formulaire a la liste des dinosaures
+    header('Location: http://localhost:8888/Dinodico/backend/public/admin/dinosaures');
       
     }
         

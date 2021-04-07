@@ -13,7 +13,7 @@ class Dinosaure extends CoreModel
     private $poids;
     private $numero;
     private $picture;
-    private $type_id;
+    private $type;
 
     public static function findAll()
     {
@@ -73,8 +73,14 @@ class Dinosaure extends CoreModel
         $sql = "
             INSERT INTO `dinosaures` (nom, taille, poids, picture)
             VALUES ('{$this->nom}', '{$this->taille}', '{$this->poids}', '{$this->picture}' )
+            
         ";
+        $sql = "
+            INSERT INTO `dinosaure_type` (type_id, dinosaure_id)
+                VALUES ('{$this->type}' '{$this->id}') 
+        "; 
 
+            
         // Execution de la requête d'insertion (exec, pas query)
         $insertedRows = $pdo->exec($sql);
 
@@ -90,6 +96,9 @@ class Dinosaure extends CoreModel
         
         // Si on arrive ici, c'est que quelque chose n'a pas bien fonctionné => FAUX
         return false;
+        
+       
+        
     }
 
     /**
@@ -109,22 +118,7 @@ class Dinosaure extends CoreModel
         $this->nom = $nom;
     }
 
-    /**
-     * Get the value of type_id
-     */ 
-    public function getTypeId()
-    {
-        return $this->type_id;
-    }
-    /**
-     * Set the value of type_id
-     *
-     * @param  int $type_id
-     */
-    public function setTypeId(int $type_id)
-    {
-        $this->type_id = $type_id;
-    }
+   
     
     /**
      * Get the value of taille
@@ -187,7 +181,11 @@ class Dinosaure extends CoreModel
         $this->picture = $picture;
     }
 
-    public function setTypes(string $type)
+
+  
+
+
+    public function setTypes( $type)
     {
         $this->type = $type;
     }

@@ -163,7 +163,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <a href="<?= $router->generate('product') ?>" class="btn btn-block btn-success">voir plus</a>
+                        <a href="<?= $router->generate('dinosaure-list') ?>" class="btn btn-block btn-success">voir plus</a>
                     </div>
                 </div>
             </div>

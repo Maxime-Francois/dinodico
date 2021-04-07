@@ -29,11 +29,11 @@ class TypeController extends CoreController
    
 
      /**
-     * Méthode s'occupant d'afficher le formulaire pour éditer une categorie
+     * Méthode s'occupant d'éditer un type
      *
      * 
      */
-    public function edit() {
+    public function editForm() {
      
      
     }

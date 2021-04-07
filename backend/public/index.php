@@ -14,13 +14,15 @@ $router->map('GET', '/admin', 'admin\AdminController#home', 'admin');
 $router->map('GET', '/admin/category', 'admin\TypeController#categories', 'category');
 $router->map('GET', '/admin/category/add', 'admin\TypeController#categoryAdd', 'category-add');
 $router->map('POST', '/admin/category/add', 'admin\TypeController#add', 'add-category');
-$router->map('GET', '/admin/category/[i:id]/edit', 'admin\TypeController#edit', 'category-edit');
+$router->map('GET', '/admin/category/[i:id]/edit', 'admin\TypeController#editForm', 'category-edit');
 $router->map('POST', '/admin/category/[i:id]/edit', 'admin\TypeController#editAdd', 'edit-category');
 $router->map('GET', '/admin/category/[i:id]/delete', 'admin\TypeController#delete', 'category-delete');
 $router->map('POST', '/admin/category/[i:id]/delete', 'admin\TypeController#deleteAdd', 'delete-category');
-$router->map('GET', '/admin/product', 'admin\DinosaureController#products', 'product');
-$router->map('GET', '/admin/product/add', 'admin\DinosaureController#productAdd', 'product-add');
-$router->map('POST', '/admin/product/add', 'admin\DinosaureController#add', 'add-product');
+$router->map('GET', '/admin/dinosaures', 'admin\DinosaureController#dinosaureList', 'dinosaure-list');
+$router->map('GET', '/admin/dinosaures/add', 'admin\DinosaureController#dinosaureForm', 'dinosaure-form');
+$router->map('POST', '/admin/dinosaures/add', 'admin\DinosaureController#add', 'dinosaure-add');
+$router->map('GET', '/login', 'admin\LoginController#login', 'login');
+$router->map('POST', '/login', 'admin\LoginController#loginPost', 'login_post');
 
 $match = $router->match();
 

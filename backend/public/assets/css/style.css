@@ -85,7 +85,7 @@ nav ul li ul li a {
    input[type=text] {
     padding: 6px;
     padding: 6px;
-      margin-top: 25px;
+      margin-top: 20px;
       font-size: 17px;
       
     font-size: 17px;
@@ -95,10 +95,10 @@ nav ul li ul li a {
    .search-container button {
     float: right;
     padding: 6px 10px;
-    margin-top: 25px;
+    margin-top: 21px;
     margin-right: 16px;
     background: #ddd;
-    font-size: 17px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
   }
@@ -118,7 +118,8 @@ nav ul li ul li a {
       text-align: left;
       width: 100%;
       margin: 0;
-      padding: 14px;
+      
+     
     }input[type=text] {
       border: 1px solid #ccc;  
     }
